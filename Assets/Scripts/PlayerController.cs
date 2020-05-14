@@ -24,16 +24,20 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pickup"))
-        Destroy(other.gameObject);
-        score += 1;
-        Debug.Log("Score: " + score);
-
-        if (other.CompareTag("Trap"))
-        health -= 1;
-        Debug.Log("Health: " + health);
-
-        if (other.CompareTag("Goal"))
+        {
+            Destroy(other.gameObject);
+            score += 1;
+            Debug.Log("Score: " + score);
+        }
+        else if (other.CompareTag("Trap"))
+        {
+            health -= 1;
+            Debug.Log("Health: " + health);
+        }
+        else if (other.CompareTag("Goal"))
+        {
         Debug.Log("You win!");
+        }
     }
      void Update()
     {
