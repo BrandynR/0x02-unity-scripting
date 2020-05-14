@@ -1781,7 +1781,7 @@ GameObject:
   - component: {fileID: 381569177}
   m_Layer: 0
   m_Name: Traps
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 394638107}
   m_Layer: 0
   m_Name: Coins
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3703,7 +3703,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!135 &1059778127
 SphereCollider:
@@ -3789,7 +3789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2256982335f1d470f9a35fd5615ac21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 2000
+  rb: {fileID: 1059778126}
   health: 5
 --- !u!1001 &1077961522
 PrefabInstance:
@@ -7311,13 +7312,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077158307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.55320996, y: -0, z: -0, w: 0.8330419}
   m_LocalPosition: {x: 22, y: 26, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 67.175, y: 0, z: 0}
 --- !u!114 &2077158312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7330,7 +7331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da42f2183fce40acbce99383d804c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1059778125}
 --- !u!1 &2082221699
 GameObject:
   m_ObjectHideFlags: 0
