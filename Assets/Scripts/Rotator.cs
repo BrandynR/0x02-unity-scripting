@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotator : MonoBehaviour
-{
 
-    // Use this for initialization
+{
+    public float rate = 1;
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(45, 0, 0) * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0,45,0) * transform.rotation, Time.deltaTime * rate);
     }
 }
